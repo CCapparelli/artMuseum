@@ -1,0 +1,18 @@
+#menuPC {
+    display: none;
+}
+#menuMobile {
+    display: flex;
+}
+body {
+    background-color: cyan;
+}
+.cardsIn {
+    flex-direction: column;
+}
+/* landscape | portrait */
+@media screen and (orientation: landscape) {
+    body {
+        background-color: lime;
+    }
+}    

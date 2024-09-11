@@ -3,25 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="src/css/index.css">
+    <link rel="stylesheet" media="screen and (max-width: 576px)" href="src/css/@mediaMobile.css">
+    
     <!-- google fonts 
          https://fonts.google.com/specimen/Protest+Guerrilla?selected=Material+Symbols+Outlined:grade:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=24&icon.color=%235f6368 
     -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap" rel="stylesheet">    
-    <!-- -->
     <!-- animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Art Museum</title>
 </head>
 <body>
     <header>
         <div class="title">ArtMuseum</div>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Galeria</a>
-            <a href="#">Contents</a>
+        <nav id="menuPC" class="menuPC">
+            <li><a href="#" onclick="toogleMenu();">Home</a></li>
+            <li><a href="#">Galeria</a></li>
+            <li><a href="#">Contents</a></li>
+        </nav>
+        <nav id="menuMobile" class="menuMobile">
+            <li><a href="#" onclick="toogleMenu();">Teste</a></li>
+            <li><a href="#">Galeria</a></li>
+            <li><a href="#">Contents</a></li>
         </nav>
     </header>
     <main>
@@ -64,5 +71,16 @@
     <footer>
         <p>ArtMuseum © 2023</p>
     </footer>
+    <script type="text/javascript">
+        function toogleMenu() {
+            if (menuMobile.style.display == 'none') {
+                menuMobile.style.display == 'flex';
+                menuPC.style.display == 'none';
+            } else {
+                menuMobile.style.display == 'none';
+                menuMobile.style.display == 'flex';
+            }
+        }
+    </script>
 </body>
 </html>

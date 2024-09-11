@@ -1,3 +1,15 @@
+@keyframes bgColor {
+    0% {
+        background-color: var(--cor1);
+    }
+    50% {
+        background-color: var(--cor2);
+    }
+    100% {
+        background-color: var(--cor3);
+    }    
+}
+
 @font-face {
     font-family: Roboto;
     src: url(../fonts/Roboto/Roboto-Regular.ttf);
@@ -19,6 +31,9 @@
     font-family: Roboto, 'Times New Roman', Times, serif;
 }
 :root {
+    --cor1: cyan;
+    --cor2: lime;
+    --cor3: yellow;
     --cinza: #2A2B2A;
     --rosa: #F5124B;
     --preta: black;
@@ -28,21 +43,26 @@
 }
 
 body {
+    width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: var(--spaceIn);
 }
 header, footer {
     width: 100%;
-    height: 50px;
-    color: var(--branca);
-    background-color: var(--preta);
-
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    color: var(--branca);
+    padding: var(--spaceIn);
+    background-color: var(--preta);
     align-items: center;
+}
+nav {
+    list-style: none;
+    display: flex;
+    gap: var(--spaceIn);
 }
 nav a {
     color: var(--branca);
@@ -61,7 +81,8 @@ footer {
 }
 
 p {
-    text-align: center
+    text-align: center;
+    padding: var(--spaceIn);
 }
 h2 {
     width: 100%;
@@ -79,9 +100,14 @@ button {
     border-radius: 8px;
     cursor: pointer;
 }
+#menuMobile {
+    display: none
+}
+#menuMobile a {
+    color:yellow;
+}
 
 .destaqueOut, .destaqueIn, .cardsOut, .cardsIn {
-    width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -135,7 +161,13 @@ p:is(.descricao) {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: var(--spaceIn)
+    gap: var(--spaceIn);
+}
+.card:hover {
+    animation-name: bgColor;
+    animation: pulse;
+    animation-duration: 2s; 
+    animation-iteration-count: infinite;
 }
 .cardTitle {
     font-weight: bold;
