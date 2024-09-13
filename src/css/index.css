@@ -55,9 +55,13 @@ header, footer {
     display: flex;
     justify-content: space-around;
     color: var(--branca);
-    padding: var(--spaceIn);
+    padding: var(--spaceIn) 0;
     background-color: var(--preta);
     align-items: center;
+}
+header {
+    position: sticky;
+    top: 0;
 }
 nav {
     list-style: none;
@@ -114,7 +118,7 @@ button {
     gap: var(--spaceIn);
 }
 .destaqueIn {
-    padding: var(--spaceIn);
+    padding: var(--spaceIn) 0;
     border: 1px solid black;
     border-radius: var(--spaceIn);  
     align-items: center;
@@ -144,6 +148,7 @@ button {
     width: 100%;
     animation: backInRight;
     animation-duration: 4s; 
+    margin: var(--spaceIn) 0;
 }
 .cardsOut p {
     font-weight: bold;

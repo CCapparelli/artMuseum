@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="src/css/index.css">
-    <link rel="stylesheet" media="screen and (max-width: 576px)" href="src/css/@mediaMobile.css">
+    <link rel="stylesheet" media="screen and (max-width: 576px)" href="src/css/mediaMobile.css">
     
     <!-- google fonts 
          https://fonts.google.com/specimen/Protest+Guerrilla?selected=Material+Symbols+Outlined:grade:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=24&icon.color=%235f6368 
@@ -31,8 +31,11 @@
             <h2>Destaque da semana</h2>
             <div class="destaqueIn">
                 <p class="detaqueTitle">Elizabeth</p>
-                <img class="destaqueImage" src="src/img/elizabeth.jpg" alt="">
-                <p class="destaqueDescricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur ab quam quis at eligendi provident magni maxime! At, eligendi. Voluptates officiis aspernatur dicta minima doloribus qui accusamus laboriosam temporibus accusantium?</p>
+                <picture>
+                    <source media="screen and (max-width: 576px)" srcset="src/img/elizabethMenor.png" >
+                    <source media="screen and (orientation: landscape)" srcset="src/img/elizabethLandscape.png" >
+                    <img class="destaqueImage" src="src/img/elizabeth.jpg" alt="banner">
+                </picture><p class="destaqueDescricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur ab quam quis at eligendi provident magni maxime! At, eligendi. Voluptates officiis aspernatur dicta minima doloribus qui accusamus laboriosam temporibus accusantium?</p>
                 <button type="button" class="button">Ver sobre</button>
             </div>
         </div>
